@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 import ClubRoutes from './routes/club.routes.js';
 import PlayerRoutes from './routes/player.routes.js';
@@ -20,6 +21,10 @@ mongoose.connect(connectionString, {
 mongoose.set('returnOriginal', false);
 
 const server = express();
+
+// ermöglicht überkreuzung der Adressen mit Zugriff auf die Datenbank
+//Browser Port 3000, Datenbank Port 4000, cross-over-Verbindung
+server.use(cors());
 
 server.use(express.json());
 

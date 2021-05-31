@@ -13,7 +13,7 @@ function postPlayer(req, res) {
   });
   player
     .save()
-    .then((playerSaved) => res.json(`${playerSaved.name} is saved.`))
+    .then((playerSaved) => res.json(playerSaved))
     .catch((error) => res.json(error));
 }
 

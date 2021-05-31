@@ -4,9 +4,9 @@ import mongoose from 'mongoose';
 const playerSchema = new mongoose.Schema({
   name: String,
   price: Number,
-  position: String,
-  club: String,
   free_transfer: Boolean,
+  club: String,
+  position: String,
   skills: Array,
   mail: String,
 });
