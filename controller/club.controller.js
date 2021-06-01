@@ -9,9 +9,10 @@ function postClub(req, res) {
   });
   club
     .save()
-    .then((clubSaved) => res.json(`${clubSaved.clubname} is saved.`))
+    .then((clubSaved) => res.json(clubSaved))
     .catch((error) => res.json(error));
 }
+/* `${clubSaved.clubname} is saved.` */
 
 function getClub(req, res) {
   Club.find().then((clubs) => {

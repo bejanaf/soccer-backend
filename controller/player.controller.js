@@ -50,6 +50,7 @@ function deletePlayer(req, res) {
     res.json({
       success: true,
       message: `the Playboy ${doc.name} has been deleted!`,
+      data: doc,
     })
   );
 }
